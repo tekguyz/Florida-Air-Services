@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Netlify Forms</title>
+</head>
+<body>
+  <!-- Static form for Netlify build-time crawler -->
+  <form name="fas-leads" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+    <input type="hidden" name="form-name" value="fas-leads" />
+    <input name="bot-field" />
+    <input type="text" name="fullName" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <select name="serviceNeeded"></select>
+    <textarea name="message"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
