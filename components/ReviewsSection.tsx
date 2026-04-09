@@ -24,7 +24,7 @@ export default function ReviewsSection() {
                   {'★'.repeat(5)}
                 </div>
                 <p className="text-white/80 italic mb-6 leading-relaxed">
-                  "{review.text}"
+                  &quot;{review.text}&quot;
                 </p>
                 <p className="text-white font-bold">
                   — {review.name}

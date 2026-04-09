@@ -12,6 +12,7 @@ export interface SiteConfig {
   };
   socials: {
     facebook: string;
+    instagram: string;
   };
   serviceAreas: string[];
   rating: string;
@@ -31,7 +32,8 @@ export const siteConfig: SiteConfig = {
     address: "Fort Lauderdale, FL"
   },
   socials: {
-    facebook: "https://www.facebook.com/FloridaAirServices"
+    facebook: "https://www.facebook.com/FloridaAirServices",
+    instagram: "https://www.instagram.com/florida_airservices/"
   },
   serviceAreas: [
     "Fort Lauderdale",

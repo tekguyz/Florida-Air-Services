@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Facebook, Instagram } from 'lucide-react';
 import { siteConfig } from '@/constants/brand';
 
 export default function Footer() {
@@ -8,21 +9,51 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-white/10 pb-12">
           {/* Brand Column */}
           <div>
-            <div className="flex flex-col mb-4">
-              <div className="flex items-center gap-2">
-                <span className="text-white font-bold tracking-tight text-2xl">
-                  ❄️ FLORIDA AIR
+            <div className="flex items-center gap-3 mb-4">
+              {/* The Icon - Fixed width for alignment */}
+              <span className="text-3xl shrink-0">❄️</span>
+              
+              {/* The Text Stack - Perfectly aligned left */}
+              <div className="flex flex-col">
+                <span className="text-white font-bold tracking-tight text-2xl uppercase leading-none">
+                  FLORIDA AIR
+                </span>
+                <span className="text-[var(--color-orange)] text-sm tracking-[0.2em] font-black uppercase leading-none mt-1">
+                  SERVICES
                 </span>
               </div>
-              <span className="text-[var(--color-orange)] text-sm tracking-widest font-semibold ml-8">
-                SERVICES
-              </span>
             </div>
             <p className="text-sm mb-6 max-w-xs leading-relaxed">
               Family-owned HVAC experts keeping South Florida cool since {siteConfig.established}. Zero corporate fluff, just absolute competence.
             </p>
-            <div className="inline-block bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm">
-              <span className="text-[var(--color-ice-blue)]">State Licensed</span> #{siteConfig.license}
+            <div className="flex flex-col gap-4">
+              <div className="inline-block bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm self-start">
+                <span className="text-[var(--color-ice-blue)]">State Licensed</span> #{siteConfig.license}
+              </div>
+              
+              <div className="flex flex-col gap-2 mt-2">
+                <p className="text-xs font-bold uppercase tracking-widest text-white/40">Follow our team</p>
+                <div className="flex gap-4">
+                  <a 
+                    href={siteConfig.socials.facebook} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-white/50 hover:text-[var(--color-orange)] transition-colors"
+                    aria-label="Follow us on Facebook"
+                  >
+                    <Facebook size={20} />
+                  </a>
+                  <a 
+                    href={siteConfig.socials.instagram} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-white/50 hover:text-[var(--color-orange)] transition-colors"
+                    aria-label="Follow us on Instagram"
+                  >
+                    <Instagram size={20} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Facebook, Instagram } from 'lucide-react';
 import { siteConfig } from '@/constants/brand';
 
 export default function Navbar() {
@@ -66,15 +66,19 @@ export default function Navbar() {
                 />
               </div>
             ) : (
-              <div className="flex flex-col">
-                <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
+                {/* The Icon - Fixed width for alignment */}
+                <span className="text-2xl sm:text-3xl shrink-0">❄️</span>
+                
+                {/* The Text Stack - Perfectly aligned left */}
+                <div className="flex flex-col">
                   <span className="text-white font-bold tracking-tight text-xl sm:text-2xl uppercase leading-none">
-                    ❄️ FLORIDA AIR
+                    FLORIDA AIR
+                  </span>
+                  <span className="text-[var(--color-orange)] text-[10px] sm:text-sm tracking-[0.2em] font-black uppercase leading-none mt-1">
+                    SERVICES
                   </span>
                 </div>
-                <span className="text-[var(--color-orange)] text-[10px] sm:text-sm tracking-widest font-semibold ml-6 sm:ml-8 mt-[-2px] uppercase">
-                  SERVICES
-                </span>
               </div>
             )}
           </Link>
@@ -155,6 +159,27 @@ export default function Navbar() {
               <p className="text-white text-sm font-bold">
                 State Licensed #CAC012143
               </p>
+            </div>
+
+            <div className="flex justify-center gap-8 pt-4">
+              <a 
+                href={siteConfig.socials.facebook} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/50 hover:text-[var(--color-orange)] transition-colors p-2"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook size={28} />
+              </a>
+              <a 
+                href={siteConfig.socials.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/50 hover:text-[var(--color-orange)] transition-colors p-2"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram size={28} />
+              </a>
             </div>
           </div>
         </div>

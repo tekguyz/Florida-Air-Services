@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Instagram } from 'lucide-react';
 import { siteConfig } from '@/constants/brand';
 import { siteCopy } from '@/constants/copy';
 import MapEmbed from './MapEmbed';
@@ -48,7 +49,7 @@ export default function ContactSection() {
               Ready for Reliable AC?
             </h2>
             <p className="text-white/80 text-lg mb-8">
-              Whether it's a 2 AM emergency or a routine checkup, Jessica's team is ready to dispatch.
+              Whether it&apos;s a 2 AM emergency or a routine checkup, Jessica&apos;s team is ready to dispatch.
             </p>
             
             <div className="space-y-6 mb-8">
@@ -75,6 +76,21 @@ export default function ContactSection() {
             </div>
 
             <MapEmbed />
+
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <h3 className="text-white font-bold text-xl mb-4">Connect With Us</h3>
+              <a 
+                href={siteConfig.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-white/80 hover:text-[var(--color-orange)] transition-colors group"
+              >
+                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[var(--color-orange)]/20 transition-colors">
+                  <Instagram size={20} />
+                </div>
+                <span className="text-sm font-medium">Check out our latest work on Instagram</span>
+              </a>
+            </div>
           </div>
 
           {/* Right Column - Form */}
@@ -87,7 +103,7 @@ export default function ContactSection() {
                   </div>
                   <h3 className="text-[var(--color-navy-deep)] text-2xl font-bold mb-2">Request Received</h3>
                   <p className="text-[var(--color-text-muted)] mb-6">
-                    Jessica's team has received your request. For immediate emergency response, please call us directly.
+                    Jessica&apos;s team has received your request. For immediate emergency response, please call us directly.
                   </p>
                   <a 
                     href={`tel:${siteConfig.contact.phone}`}
@@ -115,7 +131,7 @@ export default function ContactSection() {
                   >
                     <p className="hidden">
                       <label>
-                        Don't fill this out if you're human: <input name="bot-field" />
+                        Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
                       </label>
                     </p>
                     
@@ -180,7 +196,7 @@ export default function ContactSection() {
                         name="message" 
                         rows={4}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--color-orange)] focus:border-transparent outline-none transition-all resize-none"
-                        placeholder="Tell us what's going on with your system..."
+                        placeholder="Tell us what&apos;s going on with your system..."
                       ></textarea>
                     </div>
                     
