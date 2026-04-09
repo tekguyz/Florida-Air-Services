@@ -48,7 +48,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
-          {/* Logo Section - Unified Branding Desktop & Mobile */}
+          {/* Logo Section - Perfectly Aligned Branding */}
           <Link 
             href="/" 
             className="flex flex-col z-[110] outline-none" 
@@ -67,10 +67,7 @@ export default function Navbar() {
               </div>
             ) : (
               <div className="flex items-center gap-3">
-                {/* The Icon - Fixed width for alignment */}
                 <span className="text-2xl sm:text-3xl shrink-0">❄️</span>
-                
-                {/* The Text Stack - Perfectly aligned left */}
                 <div className="flex flex-col">
                   <span className="text-white font-bold tracking-tight text-xl sm:text-2xl uppercase leading-none">
                     FLORIDA AIR
@@ -84,7 +81,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -96,14 +93,14 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Rebuilt Desktop CTA - Larger and more prominent */}
           <div className="hidden md:block">
             <a
               href="tel:+19544925559"
-              className="bg-[var(--color-orange)] hover:bg-[var(--color-orange-dark)] text-white font-black rounded-md px-6 py-3 transition-all duration-300 hover:shadow-[0_0_20px_rgba(242,125,38,0.4)] text-xs tracking-tighter uppercase inline-flex items-center gap-2 min-h-[48px]"
+              className="bg-[var(--color-orange)] hover:bg-[var(--color-orange-dark)] text-white font-black rounded-xl px-8 py-4 transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(242,125,38,0.5)] hover:scale-105 text-base tracking-tight uppercase inline-flex items-center gap-3 shadow-xl group"
             >
-              <Phone size={14} fill="currentColor" />
-              (954) 492-5559
+              <Phone size={18} fill="currentColor" className="group-hover:animate-pulse" />
+              <span>(954) 492-5559</span>
             </a>
           </div>
 
